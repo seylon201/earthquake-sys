@@ -1,5 +1,1 @@
-# Streamlit Cloud용 최소 패키지
 streamlit
-pandas
-numpy
-plotly
