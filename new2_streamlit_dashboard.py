@@ -20,8 +20,9 @@ st.set_page_config(
 )
 
 # 메인 타이틀
-st.title("🌍 지진 조기경보 시스템")
-st.markdown("### NEW2 ConvLSTM 기반 98.5% 정확도 실시간 지진 분류 시스템")
+st.title("🌍 지진 오보 분석 시스템")
+st.markdown("#### ConvLSTM 기반 실시간 모니터링")
+st.info("🔍 세로운 이벤트 학습을 위해 사이드바의 **새로고침** 버튼을 클릭해주세요.")
 
 # 사이드바 정보
 st.sidebar.header("🎛️ 시스템 상태")
@@ -114,117 +115,131 @@ def get_demo_events():
     ]
     return pd.DataFrame(events)
 
-# 메인 화면 레이아웃
-col1, col2 = st.columns([2, 1])
+# 클래스 분포 시각화 섹션
+st.header("📊 클래스 분포 시각화")
+
+# 데이터 분포 정보
+class_data = {
+    "불규칙생활진동": 543,
+    "규칙적산업진동": 543, 
+    "지진": 543
+}
+
+col1, col2 = st.columns(2)
 
 with col1:
-    st.header("📈 실시간 센서 파형")
-    
-    # 실시간 데이터 생성
-    time_points, x_data, y_data, z_data, magnitude = generate_demo_sensor_data()
-    
-    # 4개 서브플롯 생성 (2x2)
-    from plotly.subplots import make_subplots
-    
-    fig = make_subplots(
-        rows=2, cols=2,
-        subplot_titles=('X축 가속도', 'Y축 가속도', 'Z축 가속도', '진도 (0.00~10.00)'),
-        vertical_spacing=0.08,
-        horizontal_spacing=0.08
+    st.subheader("클래스 분포")
+    # 파이 차트 생성
+    fig_pie = px.pie(
+        values=list(class_data.values()),
+        names=list(class_data.keys()),
+        color_discrete_map={
+            "불규칙생활진동": "#2E8B57",
+            "규칙적산업진동": "#FF8C00", 
+            "지진": "#DC143C"
+        }
     )
-    
-    # 처음 1000개 포인트만 표시 (10초)
-    display_points = 1000
-    time_display = time_points[:display_points]
-    
-    # X축 가속도
-    fig.add_trace(
-        go.Scatter(x=time_display, y=x_data[:display_points], 
-                  name="X축", line=dict(color="red", width=1)),
-        row=1, col=1
-    )
-    
-    # Y축 가속도
-    fig.add_trace(
-        go.Scatter(x=time_display, y=y_data[:display_points], 
-                  name="Y축", line=dict(color="green", width=1)),
-        row=1, col=2
-    )
-    
-    # Z축 가속도
-    fig.add_trace(
-        go.Scatter(x=time_display, y=z_data[:display_points], 
-                  name="Z축", line=dict(color="blue", width=1)),
-        row=2, col=1
-    )
-    
-    # 진도
-    fig.add_trace(
-        go.Scatter(x=time_display, y=magnitude[:display_points], 
-                  name="진도", line=dict(color="purple", width=2)),
-        row=2, col=2
-    )
-    
-    # 레이아웃 업데이트
-    fig.update_layout(
-        height=500,
-        showlegend=False,
-        title_text="센서 3축 가속도 및 진도 실시간 파형"
-    )
-    
-    # 모든 서브플롯 x축을 시간(초)로 설정
-    for i in range(1, 3):
-        for j in range(1, 3):
-            fig.update_xaxes(title_text="시간 (초)", row=i, col=j)
-    
-    # Y축 라벨 설정
-    fig.update_yaxes(title_text="가속도 (m/s²)", row=1, col=1)
-    fig.update_yaxes(title_text="가속도 (m/s²)", row=1, col=2)
-    fig.update_yaxes(title_text="가속도 (m/s²)", row=2, col=1)
-    fig.update_yaxes(title_text="진도", row=2, col=2, range=[0, 10])
-    
-    st.plotly_chart(fig, use_container_width=True)
+    fig_pie.update_traces(textposition='inside', textinfo='percent+label')
+    fig_pie.update_layout(height=300, margin=dict(t=0, b=0, l=0, r=0))
+    st.plotly_chart(fig_pie, use_container_width=True)
 
 with col2:
-    st.header("🎯 NEW2 AI 분석")
-    
-    # 실시간 AI 분석 결과 (동적)
-    earthquake_prob = 0.991 + np.random.normal(0, 0.005)  # 99.1% 근처에서 약간 변동
-    industrial_prob = 0.006 + np.random.normal(0, 0.002)
-    living_prob = 1.0 - earthquake_prob - industrial_prob
-    
-    # 확률 정규화
-    total = earthquake_prob + industrial_prob + living_prob
-    earthquake_prob /= total
-    industrial_prob /= total  
-    living_prob /= total
-    
-    st.markdown("#### 최신 분석 결과")
-    
-    analysis_result = {
-        "지진": earthquake_prob,
-        "규칙적산업진동": industrial_prob, 
-        "불규칙생활진동": living_prob
-    }
-    
-    for class_name, confidence in analysis_result.items():
-        color = "red" if class_name == "지진" else "orange" if class_name == "규칙적산업진동" else "green"
-        st.markdown(f"""
-        <div style="padding: 10px; border-left: 4px solid {color}; margin: 5px 0; background-color: rgba(255,255,255,0.1);">
-            <strong>{class_name}</strong><br>
-            신뢰도: {confidence:.1%}
-        </div>
-        """, unsafe_allow_html=True)
-    
-    # 경보 상태
-    st.markdown("#### 🚨 경보 상태")
-    if analysis_result["지진"] > 0.9:
-        st.error("🚨 지진 경보 발령!")
-        st.markdown("**즉시 대피하세요!**")
-        st.markdown("**진도 4.2 지진이 감지되었습니다**")
-    else:
-        st.success("✅ 정상 상태")
-        st.markdown("지진 위험도가 낮습니다")
+    st.subheader("클래스별 이벤트 수")
+    # 바 차트 생성
+    fig_bar = px.bar(
+        x=list(class_data.keys()),
+        y=list(class_data.values()),
+        color=list(class_data.keys()),
+        color_discrete_map={
+            "불규칙생활진동": "#2E8B57",
+            "규칙적산업진동": "#FF8C00",
+            "지진": "#DC143C"
+        }
+    )
+    fig_bar.update_layout(
+        height=300,
+        showlegend=False,
+        margin=dict(t=0, b=0, l=0, r=0),
+        yaxis_title="수",
+        xaxis_title=""
+    )
+    st.plotly_chart(fig_bar, use_container_width=True)
+
+# 실시간 이벤트 모니터링 및 센서 3축 가속도 파형
+st.header("📈 실시간 이벤트 모니터링 및 센서 3축 가속도 파형")
+
+# 이벤트 정보 표시바
+current_time = datetime.now()
+st.markdown(f"""
+<div style="background-color: #f0f2f6; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+<strong>이벤트:</strong> 센서_6060 | <strong>데이터:</strong> 3,973행 | <strong>분석:</strong> 🟢 불규칙생활진동 | <strong>발생시간:</strong> {current_time.strftime('%Y-%m-%d %H:%M:%S')}
+</div>
+""", unsafe_allow_html=True)
+
+# 실시간 데이터 생성
+time_points, x_data, y_data, z_data, magnitude = generate_demo_sensor_data()
+
+# 4개 서브플롯 생성 (2x2)
+from plotly.subplots import make_subplots
+
+fig = make_subplots(
+    rows=2, cols=2,
+    subplot_titles=('센서 - X축 가속도 | 진도: 3.00', '센서 - Y축 가속도', '센서 - Z축 가속도', '센서 - 진도 (0.00~15.00)'),
+    vertical_spacing=0.12,
+    horizontal_spacing=0.08
+)
+
+# 전체 데이터 표시 (더 긴 시간 범위)
+display_points = 3500
+time_display = time_points[:display_points]
+
+# X축 가속도 (빨간색)
+fig.add_trace(
+    go.Scatter(x=time_display, y=x_data[:display_points], 
+              name="X축", line=dict(color="red", width=1)),
+    row=1, col=1
+)
+
+# Y축 가속도 (청록색)
+fig.add_trace(
+    go.Scatter(x=time_display, y=y_data[:display_points], 
+              name="Y축", line=dict(color="teal", width=1)),
+    row=1, col=2
+)
+
+# Z축 가속도 (파란색)
+fig.add_trace(
+    go.Scatter(x=time_display, y=z_data[:display_points], 
+              name="Z축", line=dict(color="blue", width=1)),
+    row=2, col=1
+)
+
+# 진도 (보라색, 더 두꺼운 선)
+fig.add_trace(
+    go.Scatter(x=time_display, y=magnitude[:display_points], 
+              name="진도", line=dict(color="purple", width=2)),
+    row=2, col=2
+)
+
+# 레이아웃 업데이트
+fig.update_layout(
+    height=600,
+    showlegend=False,
+    margin=dict(t=60, b=40, l=40, r=40)
+)
+
+# 모든 서브플롯 x축을 시간으로 설정
+for i in range(1, 3):
+    for j in range(1, 3):
+        fig.update_xaxes(title_text="시간 (샘플)", row=i, col=j)
+
+# Y축 라벨 설정
+fig.update_yaxes(title_text="UI\n단위", row=1, col=1)
+fig.update_yaxes(title_text="UI\n단위", row=1, col=2)
+fig.update_yaxes(title_text="UI\n단위", row=2, col=1)
+fig.update_yaxes(title_text="진도", row=2, col=2, range=[0, 15])
+
+st.plotly_chart(fig, use_container_width=True)
 
 # 최근 이벤트 목록
 st.header("📋 최근 이벤트 목록")
