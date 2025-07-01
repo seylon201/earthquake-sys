@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-06-28T17:36:51.511880",
+  "model_name": "NEW2_ConvLSTM_3Class",
+  "dataset": "NEW2_balanced_3class",
+  "performance": {
+    "test_accuracy": 0.9846531614487416,
+    "final_train_acc": 0.9983620047569275,
+    "final_val_acc": 0.9846531748771667,
+    "epochs_trained": 18
+  },
+  "class_performance": {
+    "지진": {
+      "accuracy": 0.994475138121547,
+      "samples": 543
+    },
+    "규칙적_산업진동": {
+      "accuracy": 0.990791896869245,
+      "samples": 543
+    },
+    "불규칙_생활진동": {
+      "accuracy": 0.9686924493554327,
+      "samples": 543
+    }
+  },
+  "improvements": {
+    "vs_original": "NEW2 데이터로 12배 증가된 국내지진 데이터 활용",
+    "data_quality": "100% 성공률 전처리",
+    "balance": "완벽한 클래스 균형 (1:1:1)"
+  }
+}

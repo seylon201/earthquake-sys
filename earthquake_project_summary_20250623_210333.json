@@ -1,0 +1,11 @@
+{
+  "total_events": 10,
+  "date_range": "2018-11-30 17:35:37 ~ 2021-04-08 17:10:19",
+  "magnitude_range": "5.0 ~ 5.8",
+  "countries": {
+    "US": 10
+  },
+  "networks": {
+    "ak": 10
+  }
+}

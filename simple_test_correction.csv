@@ -1,0 +1,4 @@
+timestamp,sensor_1_x,sensor_1_y,sensor_1_z,intensity,ai_predicted_class,ai_final_class,ai_final_class_name,ai_final_confidence,expert_corrected,expert_corrected_class,expert_corrected_class_name,expert_corrected_timestamp
+2025-06-30 12:00:01,1.2,0.8,1.5,5.2,1,1,규칙적산업진동,0.85,True,0,지진,2025-06-30_12-00-01
+2025-06-30 12:00:02,1.1,0.9,1.4,5.1,1,1,규칙적산업진동,0.85,True,0,지진,2025-06-30_12-00-01
+2025-06-30 12:00:03,1.3,0.7,1.6,5.3,1,1,규칙적산업진동,0.85,True,0,지진,2025-06-30_12-00-01

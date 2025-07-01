@@ -1,0 +1,786 @@
+{
+  "total_corrections": 55,
+  "last_retraining": "20250630_222447",
+  "retraining_count": 4,
+  "corrected_files": [
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_16-45-55.csv",
+      "filename": "new2_ai_6060_2025-06-30_16-45-55.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-46-26",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_17-34-28.csv",
+      "filename": "new2_ai_6060_2025-06-30_17-34-28.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_17-35-49",
+      "file_size": 3947,
+      "data_shape": [
+        3947,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_17-54-15.csv",
+      "filename": "new2_ai_6060_2025-06-30_17-54-15.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-43-22",
+      "file_size": 3985,
+      "data_shape": [
+        3985,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-04-45.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-04-45.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-43-07",
+      "file_size": 3956,
+      "data_shape": [
+        3956,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-30-02.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-30-02.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-42-26",
+      "file_size": 4058,
+      "data_shape": [
+        4058,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-36-04.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-36-04.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-42-10",
+      "file_size": 3955,
+      "data_shape": [
+        3955,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-39-38.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-39-38.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-59",
+      "file_size": 4079,
+      "data_shape": [
+        4079,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-44-05.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-44-05.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-42",
+      "file_size": 4058,
+      "data_shape": [
+        4058,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-54-19.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-54-19.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-32",
+      "file_size": 3970,
+      "data_shape": [
+        3970,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-58-26.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-58-26.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-11",
+      "file_size": 4058,
+      "data_shape": [
+        4058,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-01-48.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-01-48.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-40-45",
+      "file_size": 4051,
+      "data_shape": [
+        4051,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-03-07.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-03-07.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-40-13",
+      "file_size": 1615,
+      "data_shape": [
+        1615,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-06-40.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-06-40.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_20-15-30",
+      "file_size": 2460,
+      "data_shape": [
+        2460,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-07-25.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-07-25.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_20-09-17",
+      "file_size": 3986,
+      "data_shape": [
+        3986,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-11-36.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-11-36.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_20-04-25",
+      "file_size": 4002,
+      "data_shape": [
+        4002,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-20-32.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-20-32.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_19-51-34",
+      "file_size": 4047,
+      "data_shape": [
+        4047,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-22-15.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-22-15.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_19-45-08",
+      "file_size": 1564,
+      "data_shape": [
+        1564,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-39-02.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-39-02.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_19-40-31",
+      "file_size": 3984,
+      "data_shape": [
+        3984,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_21-52-16.csv",
+      "filename": "new2_ai_6060_2025-06-30_21-52-16.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-53-37",
+      "file_size": 3973,
+      "data_shape": [
+        3973,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_21-56-57.csv",
+      "filename": "new2_ai_6060_2025-06-30_21-56-57.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_22-16-10",
+      "file_size": 3990,
+      "data_shape": [
+        3990,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_22-05-25.csv",
+      "filename": "new2_ai_6060_2025-06-30_22-05-25.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_22-07-28",
+      "file_size": 3971,
+      "data_shape": [
+        3971,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_22-22-53.csv",
+      "filename": "new2_ai_6060_2025-06-30_22-22-53.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_22-24-06",
+      "file_size": 2467,
+      "data_shape": [
+        2467,
+        35
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_7053_2025-06-30_15-45-55.csv",
+      "filename": "new2_ai_7053_2025-06-30_15-45-55.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_16-45-55",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_7070_2025-06-30_15-25-55.csv",
+      "filename": "new2_ai_7070_2025-06-30_15-25-55.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_16-35-55",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_8010_2025-06-30_13-45-55.csv",
+      "filename": "new2_ai_8010_2025-06-30_13-45-55.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_17-05-28",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_8080_2025-06-30_17-58-10.csv",
+      "filename": "new2_ai_8080_2025-06-30_17-58-10.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_21-42-55",
+      "file_size": 4040,
+      "data_shape": [
+        4040,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_8080_2025-06-30_19-17-03.csv",
+      "filename": "new2_ai_8080_2025-06-30_19-17-03.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_21-42-39",
+      "file_size": 4026,
+      "data_shape": [
+        4026,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\simple_test_correction.csv",
+      "filename": "simple_test_correction.csv",
+      "original_class": 1,
+      "corrected_class": 0,
+      "corrected_class_name": "지진",
+      "correction_timestamp": "2025-06-30_12-00-01",
+      "file_size": 3,
+      "data_shape": [
+        3,
+        13
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_16-45-55.csv",
+      "filename": "new2_ai_6060_2025-06-30_16-45-55.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-46-26",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_17-34-28.csv",
+      "filename": "new2_ai_6060_2025-06-30_17-34-28.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_17-35-49",
+      "file_size": 3947,
+      "data_shape": [
+        3947,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_17-54-15.csv",
+      "filename": "new2_ai_6060_2025-06-30_17-54-15.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-43-22",
+      "file_size": 3985,
+      "data_shape": [
+        3985,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-04-45.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-04-45.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-43-07",
+      "file_size": 3956,
+      "data_shape": [
+        3956,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-30-02.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-30-02.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-42-26",
+      "file_size": 4058,
+      "data_shape": [
+        4058,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-36-04.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-36-04.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-42-10",
+      "file_size": 3955,
+      "data_shape": [
+        3955,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-39-38.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-39-38.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-59",
+      "file_size": 4079,
+      "data_shape": [
+        4079,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-44-05.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-44-05.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-42",
+      "file_size": 4058,
+      "data_shape": [
+        4058,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-54-19.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-54-19.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-32",
+      "file_size": 3970,
+      "data_shape": [
+        3970,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_18-58-26.csv",
+      "filename": "new2_ai_6060_2025-06-30_18-58-26.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-41-11",
+      "file_size": 4058,
+      "data_shape": [
+        4058,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-01-48.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-01-48.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-40-45",
+      "file_size": 4051,
+      "data_shape": [
+        4051,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-03-07.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-03-07.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-40-13",
+      "file_size": 1615,
+      "data_shape": [
+        1615,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-06-40.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-06-40.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_20-15-30",
+      "file_size": 2460,
+      "data_shape": [
+        2460,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-07-25.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-07-25.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_20-09-17",
+      "file_size": 3986,
+      "data_shape": [
+        3986,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-11-36.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-11-36.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_20-04-25",
+      "file_size": 4002,
+      "data_shape": [
+        4002,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-20-32.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-20-32.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_19-51-34",
+      "file_size": 4047,
+      "data_shape": [
+        4047,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-22-15.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-22-15.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_19-45-08",
+      "file_size": 1564,
+      "data_shape": [
+        1564,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_19-39-02.csv",
+      "filename": "new2_ai_6060_2025-06-30_19-39-02.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_19-40-31",
+      "file_size": 3984,
+      "data_shape": [
+        3984,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_21-52-16.csv",
+      "filename": "new2_ai_6060_2025-06-30_21-52-16.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_21-53-37",
+      "file_size": 3973,
+      "data_shape": [
+        3973,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_21-56-57.csv",
+      "filename": "new2_ai_6060_2025-06-30_21-56-57.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_22-16-10",
+      "file_size": 3990,
+      "data_shape": [
+        3990,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_22-05-25.csv",
+      "filename": "new2_ai_6060_2025-06-30_22-05-25.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_22-07-28",
+      "file_size": 3971,
+      "data_shape": [
+        3971,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_6060_2025-06-30_22-22-53.csv",
+      "filename": "new2_ai_6060_2025-06-30_22-22-53.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_22-24-06",
+      "file_size": 2467,
+      "data_shape": [
+        2467,
+        35
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_7053_2025-06-30_15-45-55.csv",
+      "filename": "new2_ai_7053_2025-06-30_15-45-55.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_16-45-55",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_7070_2025-06-30_15-25-55.csv",
+      "filename": "new2_ai_7070_2025-06-30_15-25-55.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_16-35-55",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_8010_2025-06-30_13-45-55.csv",
+      "filename": "new2_ai_8010_2025-06-30_13-45-55.csv",
+      "original_class": 2,
+      "corrected_class": 2,
+      "corrected_class_name": "불규칙생활진동",
+      "correction_timestamp": "2025-06-30_17-05-28",
+      "file_size": 4000,
+      "data_shape": [
+        4000,
+        18
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_8080_2025-06-30_17-58-10.csv",
+      "filename": "new2_ai_8080_2025-06-30_17-58-10.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_21-42-55",
+      "file_size": 4040,
+      "data_shape": [
+        4040,
+        37
+      ]
+    },
+    {
+      "filepath": "C:\\earthquake_project\\influxLogs\\new2_analysis\\new2_ai_8080_2025-06-30_19-17-03.csv",
+      "filename": "new2_ai_8080_2025-06-30_19-17-03.csv",
+      "original_class": 1,
+      "corrected_class": 1,
+      "corrected_class_name": "규칙적산업진동",
+      "correction_timestamp": "2025-06-30_21-42-39",
+      "file_size": 4026,
+      "data_shape": [
+        4026,
+        37
+      ]
+    }
+  ],
+  "model_versions": [
+    {
+      "model_path": "retrained_models\\new2_retrained_20250630_214744.h5",
+      "timestamp": "20250630_214744",
+      "training_samples": 47,
+      "final_accuracy": 0.9189189076423645,
+      "final_val_accuracy": 0.8999999761581421,
+      "base_model": "new2_convlstm_3class_best.h5",
+      "retraining_method": "incremental_learning"
+    },
+    {
+      "model_path": "retrained_models\\new2_retrained_20250630_215418.h5",
+      "timestamp": "20250630_215418",
+      "training_samples": 49,
+      "final_accuracy": 0.9230769276618958,
+      "final_val_accuracy": 0.6000000238418579,
+      "base_model": "new2_convlstm_3class_best.h5",
+      "retraining_method": "incremental_learning"
+    },
+    {
+      "model_path": "retrained_models\\new2_retrained_20250630_221653.h5",
+      "timestamp": "20250630_221653",
+      "training_samples": 53,
+      "final_accuracy": 0.9285714030265808,
+      "final_val_accuracy": 0.7272727489471436,
+      "base_model": "new2_convlstm_3class_best.h5",
+      "retraining_method": "incremental_learning"
+    },
+    {
+      "model_path": "retrained_models\\new2_retrained_20250630_222447.h5",
+      "timestamp": "20250630_222447",
+      "training_samples": 55,
+      "final_accuracy": 0.9318181872367859,
+      "final_val_accuracy": 0.9090909361839294,
+      "base_model": "new2_convlstm_3class_best.h5",
+      "retraining_method": "incremental_learning"
+    }
+  ],
+  "performance_history": [
+    {
+      "timestamp": "20250630_214744",
+      "accuracy": 0.9189189076423645,
+      "val_accuracy": 0.8999999761581421,
+      "samples_count": 47
+    },
+    {
+      "timestamp": "20250630_215418",
+      "accuracy": 0.9230769276618958,
+      "val_accuracy": 0.6000000238418579,
+      "samples_count": 49
+    },
+    {
+      "timestamp": "20250630_221653",
+      "accuracy": 0.9285714030265808,
+      "val_accuracy": 0.7272727489471436,
+      "samples_count": 53
+    },
+    {
+      "timestamp": "20250630_222447",
+      "accuracy": 0.9318181872367859,
+      "val_accuracy": 0.9090909361839294,
+      "samples_count": 55
+    }
+  ]
+}

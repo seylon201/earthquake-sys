@@ -1,0 +1,134 @@
+{
+  "creation_info": {
+    "timestamp": "2025-06-28T21:49:06.269386",
+    "dataset_name": "NEW2_3class_balanced",
+    "version": "v2.0",
+    "description": "NEW2 시리즈 데이터를 3클래스로 병합한 균형 데이터셋"
+  },
+  "data_info": {
+    "total_samples": 8311,
+    "input_shape": "(N, 40, 3, 100, 1)",
+    "sampling_rate": "100Hz",
+    "duration": "40초 (전 15초 + 후 25초)",
+    "normalization": "z-score"
+  },
+  "class_mapping": {
+    "0": "지진 (국내지진 + 일본지진)",
+    "1": "규칙적 산업진동 (Motor만, Industry 제외)",
+    "2": "불규칙 생활진동 (Live + Irregular)"
+  },
+  "source_statistics": {
+    "kor_quake": {
+      "count": 2308,
+      "class": 0,
+      "shape": [
+        2308,
+        40,
+        3,
+        100,
+        1
+      ]
+    },
+    "jpn_quake": {
+      "count": 1564,
+      "class": 0,
+      "shape": [
+        1564,
+        40,
+        3,
+        100,
+        1
+      ]
+    },
+    "motor": {
+      "count": 1604,
+      "class": 1,
+      "shape": [
+        1604,
+        40,
+        3,
+        100,
+        1
+      ]
+    },
+    "live": {
+      "count": 2135,
+      "class": 2,
+      "shape": [
+        2135,
+        40,
+        3,
+        100,
+        1
+      ]
+    },
+    "irregular": {
+      "count": 700,
+      "class": 2,
+      "shape": [
+        700,
+        40,
+        3,
+        100,
+        1
+      ]
+    }
+  },
+  "class_statistics": {
+    "0": {
+      "name": "지진",
+      "total": 3872,
+      "percentage": 46.6,
+      "sources": {
+        "jpn_quake": 1564,
+        "kor_quake": 2308
+      }
+    },
+    "1": {
+      "name": "규칙적_산업진동",
+      "total": 1604,
+      "percentage": 19.3,
+      "sources": {
+        "motor": 1604
+      }
+    },
+    "2": {
+      "name": "불규칙_생활진동",
+      "total": 2835,
+      "percentage": 34.1,
+      "sources": {
+        "irregular": 700,
+        "live": 2135
+      }
+    }
+  },
+  "split_info": {
+    "method": "stratified",
+    "ratios": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    },
+    "random_state": 42
+  },
+  "files": {
+    "saved_files": [
+      "new2_3class_train_X.npy",
+      "new2_3class_train_y.npy",
+      "new2_3class_train_sources.npy",
+      "new2_3class_val_X.npy",
+      "new2_3class_val_y.npy",
+      "new2_3class_val_sources.npy",
+      "new2_3class_test_X.npy",
+      "new2_3class_test_y.npy",
+      "new2_3class_test_sources.npy"
+    ],
+    "location": "./new2_3class_dataset"
+  },
+  "new2_improvements": {
+    "vs_6class": "평균 3.5배 데이터 증가",
+    "korean_earthquake": "12배 증가 (189개 → 2,308개)",
+    "success_rate": "100% (실패 파일 없음)",
+    "convlstm_compatibility": "완벽한 호환성"
+  }
+}

@@ -1,0 +1,63 @@
+# Git 관련
+.git
+.gitignore
+README.md
+
+# Python 관련
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 개발 환경
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 로그 파일
+*.log
+logs/
+
+# 임시 파일
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 대용량 데이터 파일 (선별적으로 포함)
+*.zip
+capture/
+
+# 문서 파일
+*.md
+*.txt
+*.pdf
+*.hwp
+*.png
+*.jpg
+*.jpeg
+
+# 제외할 Python 스크립트 (배포에 불필요)
+debug_*.py
+test_*.py
+analyze_*.py
+check_*.py
+setup_*.py
+fix_*.py
+generate_*.py
+create_*.py
+
+# 데이터 전처리 스크립트 (운영환경에서 불필요)
+*process_*.py
+combine_*.py
+train_*.py
+convert_*.py
+preprocess_*.py
+retrain_*.py

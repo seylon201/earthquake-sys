@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-28T21:13:21.413941",
+  "environment_results": {
+    "packages": {
+      "streamlit": {
+        "status": "MISSING",
+        "version": null
+      },
+      "plotly": {
+        "status": "MISSING",
+        "version": null
+      },
+      "pandas": {
+        "status": "MISSING",
+        "version": null
+      },
+      "numpy": {
+        "status": "MISSING",
+        "version": null
+      },
+      "tensorflow": {
+        "status": "MISSING",
+        "version": null
+      },
+      "influxdb_client": {
+        "status": "MISSING",
+        "version": null
+      },
+      "requests": {
+        "status": "OK",
+        "version": "2.31.0"
+      }
+    },
+    "files": {
+      "new2_convlstm_3class_best.h5": {
+        "status": "OK",
+        "size_mb": 3.8354949951171875
+      },
+      "new2_convlstm_3class_final.h5": {
+        "status": "OK",
+        "size_mb": 3.8354949951171875
+      },
+      "convlstm_3class_model.h5": {
+        "status": "OK",
+        "size_mb": 3.8354949951171875
+      },
+      "new2_streamlit_dashboard.py": {
+        "status": "OK",
+        "size_kb": 30.4375
+      },
+      "influx_new2_realtime.py": {
+        "status": "OK",
+        "size_kb": 20.115234375
+      },
+      "new2_realtime_earthquake_detection.py": {
+        "status": "OK",
+        "size_kb": 45.7958984375
+      }
+    },
+    "directories": {
+      "C:/earthquake_modeling/earthquake_project_v3/influxLogs/base": {
+        "status": "WILL_CREATE",
+        "file_count": 0
+      },
+      "C:/earthquake_modeling/earthquake_project_v3/influxLogs/new2_analysis": {
+        "status": "WILL_CREATE",
+        "file_count": 0
+      },
+      "C:/earthquake_modeling/earthquake_project_v3/influxLogs/alerts": {
+        "status": "WILL_CREATE",
+        "file_count": 0
+      },
+      "C:/earthquake_modeling/earthquake_project_v3/influxLogs/processed": {
+        "status": "WILL_CREATE",
+        "file_count": 0
+      }
+    }
+  },
+  "config_test": {
+    "BASE_OUTPUT_DIR": "C:/earthquake_modeling/earthquake_project_v3/influxLogs",
+    "NEW2_MODEL_PATHS": [
+      "new2_convlstm_3class_best.h5",
+      "new2_convlstm_3class_final.h5",
+      "convlstm_3class_model.h5"
+    ],
+    "PORTS": [
+      6060,
+      7001,
+      7053,
+      7060,
+      7070,
+      8010,
+      8080
+    ],
+    "AUTO_REFRESH_INTERVAL": 8
+  },
+  "readiness": {
+    "package_readiness": 14.285714285714285,
+    "model_files_ready": 3,
+    "script_files_ready": 3,
+    "overall_readiness": 53.84615384615385
+  },
+  "missing_packages": [
+    "streamlit",
+    "plotly",
+    "pandas",
+    "numpy",
+    "tensorflow",
+    "influxdb_client"
+  ]
+}

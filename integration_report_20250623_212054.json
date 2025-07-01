@@ -1,0 +1,40 @@
+{
+  "integration_info": {
+    "timestamp": "20250623_212054",
+    "total_records": 1146,
+    "total_columns": 36
+  },
+  "data_sources": {
+    "existing_data": {
+      "count": 3430,
+      "sources": {
+        "japan_ohtashi": 1170,
+        "korea_kma": 2260
+      }
+    },
+    "cesmd_data": {
+      "count": 1146,
+      "magnitude_range": "3.0-6.0",
+      "regions": {
+        "North America": 1040,
+        "Other": 60,
+        "Pacific": 44,
+        "East Asia": 2
+      }
+    }
+  },
+  "combined_totals": {
+    "total_events": 4576,
+    "magnitude_coverage": "3.0-6.0+",
+    "geographic_coverage": [
+      "East Asia",
+      "North America",
+      "Pacific"
+    ],
+    "time_span": "1933-2025"
+  },
+  "quality_metrics": {
+    "missing_values": "1029",
+    "data_completeness": "97.5%"
+  }
+}

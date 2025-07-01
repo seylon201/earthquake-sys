@@ -1,0 +1,206 @@
+{
+  "scan_time": "2025-06-28T16:48:27.612803",
+  "total_files": 32,
+  "categories": {
+    "earthquake": [
+      {
+        "filename": "new2_jpn_quake_data.npy",
+        "directory": ".",
+        "size_mb": 143.19,
+        "shape_info": "형태: (1564, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new2_jpn_quake_labels.npy",
+        "directory": ".",
+        "size_mb": 0.01,
+        "shape_info": "형태: (1564,)"
+      },
+      {
+        "filename": "new2_kor_quake_data.npy",
+        "directory": ".",
+        "size_mb": 211.3,
+        "shape_info": "형태: (2308, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new2_kor_quake_labels.npy",
+        "directory": ".",
+        "size_mb": 0.01,
+        "shape_info": "형태: (2308,)"
+      },
+      {
+        "filename": "new_jpn_quake_data.npy",
+        "directory": ".",
+        "size_mb": 107.12,
+        "shape_info": "형태: (1170, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new_jpn_quake_labels.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (1170,)"
+      },
+      {
+        "filename": "new_kor_quake_data.npy",
+        "directory": ".",
+        "size_mb": 206.91,
+        "shape_info": "형태: (2260, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new_kor_quake_labels.npy",
+        "directory": ".",
+        "size_mb": 0.01,
+        "shape_info": "형태: (2260,)"
+      }
+    ],
+    "industry": [
+      {
+        "filename": "new2_industry_data.npy",
+        "directory": ".",
+        "size_mb": 101.62,
+        "shape_info": "형태: (1110, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new2_industry_labels.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (1110,)"
+      },
+      {
+        "filename": "new2_motor_data.npy",
+        "directory": ".",
+        "size_mb": 146.85,
+        "shape_info": "형태: (1604, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new2_motor_labels.npy",
+        "directory": ".",
+        "size_mb": 0.01,
+        "shape_info": "형태: (1604,)"
+      },
+      {
+        "filename": "new_industry_data.npy",
+        "directory": ".",
+        "size_mb": 101.62,
+        "shape_info": "형태: (1110, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new_industry_labels.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (1110,)"
+      },
+      {
+        "filename": "new_motor_2_data.npy",
+        "directory": ".",
+        "size_mb": 54.93,
+        "shape_info": "형태: (600, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new_motor_2_labels.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (600,)"
+      },
+      {
+        "filename": "new_motor_data.npy",
+        "directory": ".",
+        "size_mb": 91.92,
+        "shape_info": "형태: (1004, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new_motor_labels.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (1004,)"
+      }
+    ],
+    "living": [
+      {
+        "filename": "new2_irregular_data.npy",
+        "directory": ".",
+        "size_mb": 64.09,
+        "shape_info": "형태: (700, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new2_irregular_labels.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (700,)"
+      },
+      {
+        "filename": "new2_live_data.npy",
+        "directory": ".",
+        "size_mb": 195.47,
+        "shape_info": "형태: (2135, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new2_live_labels.npy",
+        "directory": ".",
+        "size_mb": 0.01,
+        "shape_info": "형태: (2135,)"
+      },
+      {
+        "filename": "new_irregular_data.npy",
+        "directory": ".",
+        "size_mb": 51.36,
+        "shape_info": "형태: (561, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new_irregular_labels.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (561,)"
+      },
+      {
+        "filename": "new_live_data.npy",
+        "directory": ".",
+        "size_mb": 143.01,
+        "shape_info": "형태: (1562, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "new_live_labels.npy",
+        "directory": ".",
+        "size_mb": 0.01,
+        "shape_info": "형태: (1562,)"
+      }
+    ],
+    "combined": [
+      {
+        "filename": "combined_4class_X.npy",
+        "directory": ".",
+        "size_mb": 716.03,
+        "shape_info": "형태: (7821, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "combined_4class_y.npy",
+        "directory": ".",
+        "size_mb": 0.03,
+        "shape_info": "형태: (7821,)"
+      },
+      {
+        "filename": "eqt_data_X.npy",
+        "directory": ".",
+        "size_mb": 982.86,
+        "shape_info": "형태: (7157, 6000, 3)"
+      },
+      {
+        "filename": "eqt_data_y.npy",
+        "directory": ".",
+        "size_mb": 0.03,
+        "shape_info": "형태: (7157,)"
+      },
+      {
+        "filename": "X_balanced.npy",
+        "directory": ".",
+        "size_mb": 107.12,
+        "shape_info": "형태: (1170, 40, 3, 100, 1)"
+      },
+      {
+        "filename": "y_balanced.npy",
+        "directory": ".",
+        "size_mb": 0.0,
+        "shape_info": "형태: (1170,)"
+      }
+    ]
+  }
+}

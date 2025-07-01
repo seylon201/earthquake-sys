@@ -1,0 +1,13 @@
+# GitHub 저장소 생성 후 실행할 명령어
+
+# 1. 원격 저장소 추가 (GitHub에서 생성한 저장소 URL로 변경)
+git remote add origin https://github.com/YOUR_USERNAME/earthquake-system.git
+
+# 2. 기본 브랜치를 main으로 변경
+git branch -M main
+
+# 3. 저장소에 푸시
+git push -u origin main
+
+# 성공 메시지가 나타나면 완료!
+# GitHub 저장소 페이지에서 파일들이 업로드된 것을 확인할 수 있습니다.

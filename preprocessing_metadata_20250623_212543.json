@@ -1,0 +1,146 @@
+{
+  "preprocessing_info": {
+    "timestamp": "20250623_212543",
+    "original_records": 1146,
+    "final_features": 62,
+    "label_encoders": {
+      "state": [
+        "AK",
+        "AR",
+        "AZ",
+        "CA",
+        "HI",
+        "ID",
+        "IL",
+        "KS",
+        "MT",
+        "NC",
+        "NV",
+        "OK",
+        "OR",
+        "PR",
+        "TX",
+        "UT",
+        "VA"
+      ],
+      "net": [
+        "AK",
+        "CI",
+        "HI",
+        "HV",
+        "NC",
+        "US",
+        "ak",
+        "ci",
+        "gcmt",
+        "hv",
+        "nc",
+        "nn",
+        "ok",
+        "pr",
+        "se",
+        "tx",
+        "us",
+        "uu",
+        "uw"
+      ],
+      "magType": [
+        "M",
+        "MB",
+        "MH",
+        "MI",
+        "ML",
+        "MLR",
+        "MW",
+        "MWP",
+        "MWR",
+        "MWW",
+        "Mb",
+        "Md",
+        "Ml",
+        "Mlr",
+        "Ms",
+        "Mw"
+      ],
+      "faultType": [
+        "ALL",
+        "NM",
+        "NO",
+        "RO",
+        "RS",
+        "SS"
+      ],
+      "type": [
+        "earthquake"
+      ],
+      "mag_range": [
+        "3.0-3.5",
+        "3.5-4.0",
+        "4.0-4.5",
+        "4.5-5.0",
+        "5.0-5.5",
+        "5.5-6.0"
+      ],
+      "collection_timestamp": [
+        "2025-06-23T21:06:36.082795",
+        "2025-06-23T21:06:36.083793",
+        "2025-06-23T21:06:37.780290",
+        "2025-06-23T21:06:37.781287",
+        "2025-06-23T21:06:39.600422",
+        "2025-06-23T21:06:39.601421",
+        "2025-06-23T21:06:41.317826",
+        "2025-06-23T21:06:41.318824",
+        "2025-06-23T21:06:43.044209",
+        "2025-06-23T21:06:44.719727",
+        "2025-06-23T21:06:44.720725"
+      ],
+      "mag_category": [
+        "3.0-3.4",
+        "3.5-3.9",
+        "4.0-4.4",
+        "4.5-4.9",
+        "5.0-5.4",
+        "5.5-5.9"
+      ],
+      "event_type": [
+        "earthquake"
+      ],
+      "region": [
+        "East Asia",
+        "North America",
+        "Other",
+        "Pacific"
+      ],
+      "data_source": [
+        "CESMD"
+      ],
+      "integration_timestamp": [
+        "2025-06-23T21:20:38.420059"
+      ],
+      "season_name": [
+        "Fall",
+        "Spring",
+        "Summer",
+        "Winter"
+      ]
+    }
+  },
+  "file_mapping": {
+    "full_data": "earthquake_preprocessed_full_20250623_212543.csv",
+    "convlstm_features": "earthquake_features_convlstm_20250623_212543.csv",
+    "project_compatible": "earthquake_project_compatible_20250623_212543.csv",
+    "train_data": "earthquake_train_20250623_212543.csv",
+    "validation_data": "earthquake_val_20250623_212543.csv",
+    "test_data": "earthquake_test_20250623_212543.csv"
+  },
+  "data_statistics": {
+    "magnitude_range": "3.0-6.0",
+    "regions": {
+      "North America": 1040,
+      "Other": 60,
+      "Pacific": 44,
+      "East Asia": 2
+    },
+    "time_range": "1933-2025"
+  }
+}

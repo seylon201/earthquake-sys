@@ -1,0 +1,130 @@
+{
+  "timestamp": "2025-06-28T21:47:22.484639",
+  "revision_info": {
+    "title": "NEW2 3클래스 수정 계획",
+    "version": "v2.1",
+    "reason": "규칙적산업진동 클래스 편향 문제 해결",
+    "excluded_data": "industry 데이터 (1,110개 샘플)"
+  },
+  "file_analysis": {
+    "kor_quake": {
+      "data_file": "new2_kor_quake_data.npy",
+      "label_file": "new2_kor_quake_labels.npy",
+      "data_exists": true,
+      "label_exists": true,
+      "both_exist": true
+    },
+    "jpn_quake": {
+      "data_file": "new2_jpn_quake_data.npy",
+      "label_file": "new2_jpn_quake_labels.npy",
+      "data_exists": true,
+      "label_exists": true,
+      "both_exist": true
+    },
+    "industry": {
+      "data_file": "new2_industry_data.npy",
+      "label_file": "new2_industry_labels.npy",
+      "data_exists": true,
+      "label_exists": true,
+      "both_exist": true
+    },
+    "motor": {
+      "data_file": "new2_motor_data.npy",
+      "label_file": "new2_motor_labels.npy",
+      "data_exists": true,
+      "label_exists": true,
+      "both_exist": true
+    },
+    "live": {
+      "data_file": "new2_live_data.npy",
+      "label_file": "new2_live_labels.npy",
+      "data_exists": true,
+      "label_exists": true,
+      "both_exist": true
+    },
+    "irregular": {
+      "data_file": "new2_irregular_data.npy",
+      "label_file": "new2_irregular_labels.npy",
+      "data_exists": true,
+      "label_exists": true,
+      "both_exist": true
+    }
+  },
+  "revised_class_mapping": {
+    "0": {
+      "name": "지진",
+      "sources": [
+        "kor_quake",
+        "jpn_quake"
+      ],
+      "description": "한국 지진 + 일본 지진 데이터"
+    },
+    "1": {
+      "name": "규칙적산업진동",
+      "sources": [
+        "motor"
+      ],
+      "description": "모터 진동 데이터만 (industry 제외)"
+    },
+    "2": {
+      "name": "불규칙생활진동",
+      "sources": [
+        "live",
+        "irregular"
+      ],
+      "description": "생활 진동 + 불규칙 진동 데이터"
+    }
+  },
+  "estimated_balance": {
+    "class_counts": {
+      "0": 3872,
+      "1": 1604,
+      "2": 2835
+    },
+    "total_samples": 8311
+  },
+  "implementation_steps": [
+    {
+      "step": 1,
+      "title": "수정된 3클래스 데이터셋 생성",
+      "tasks": [
+        "industry 데이터 제외한 3class_balanced_dataset.py 실행",
+        "새로운 균형 데이터셋 생성 (motor만 클래스 1로)",
+        "6:2:2 분할로 훈련/검증/테스트 세트 생성"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "NEW2 모델 재훈련",
+      "tasks": [
+        "train_new2_convlstm.py로 새 데이터셋 훈련",
+        "성능 지표 분석 및 클래스별 정확도 확인",
+        "혼동행렬 분석으로 편향 해결 여부 검증"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "실시간 시스템 업데이트",
+      "tasks": [
+        "새 모델로 influx_new2_realtime.py 테스트",
+        "다양한 진동 유형에 대한 분류 정확도 검증",
+        "오경보율 감소 효과 측정"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "성능 비교 및 문서화",
+      "tasks": [
+        "기존 vs 수정된 모델 성능 비교",
+        "실제 환경 테스트 결과 업데이트",
+        "PROJECT_PLAN.md 업데이트"
+      ]
+    }
+  ],
+  "expected_improvements": {
+    "reduced_bias": "규칙적산업진동 클래스 편향 해결",
+    "better_balance": "3클래스 간 더 나은 균형",
+    "improved_accuracy": "지진 및 불규칙생활진동 인식률 향상",
+    "reduced_false_alarms": "오경보율 감소 기대"
+  }
+}
