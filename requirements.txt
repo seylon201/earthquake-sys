@@ -1,0 +1,21 @@
+# 지진 조기경보 시스템 Python 의존성
+streamlit>=1.28.0
+pandas>=1.5.0
+numpy>=1.21.0
+tensorflow>=2.9.0
+plotly>=5.0.0
+influxdb-client>=1.35.0
+scikit-learn>=1.0.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly-express>=0.4.0
+
+# 시스템 의존성
+python-dateutil>=2.8.0
+pytz>=2022.1
+requests>=2.28.0
+urllib3>=1.26.0
+
+# 추가 유틸리티
+joblib>=1.1.0
+tqdm>=4.64.0

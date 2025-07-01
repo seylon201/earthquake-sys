@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  earthquake_dashboard:
+    build: .
+    container_name: earthquake_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      # 데이터 보존을 위한 볼륨 마운트
+      - ./influxLogs:/app/influxLogs
+      - ./data:/app/data
+      - ./retrained_models:/app/retrained_models
+    environment:
+      - PYTHONPATH=/app
+      - TZ=Asia/Seoul
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - earthquake_network
+
+  # InfluxDB (선택사항 - 외부 InfluxDB 사용 시 제거)
+  influxdb:
+    image: influxdb:2.0
+    container_name: earthquake_influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=earthquake
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin123
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+    restart: unless-stopped
+    networks:
+      - earthquake_network
+
+networks:
+  earthquake_network:
+    driver: bridge
+
+volumes:
+  influxdb_data:

@@ -1,0 +1,1 @@
+web: streamlit run new2_streamlit_dashboard.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true --server.fileWatcherType=none --browser.gatherUsageStats=false

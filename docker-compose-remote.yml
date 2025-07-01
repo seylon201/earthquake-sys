@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  earthquake_dashboard:
+    build: .
+    container_name: earthquake_dashboard_remote
+    ports:
+      - "80:8501"        # 외부 80포트 → 내부 8501포트
+      - "8501:8501"      # 기본 포트도 유지
+    volumes:
+      - ./influxLogs:/app/influxLogs
+      - ./data:/app/data
+      - ./retrained_models:/app/retrained_models
+    environment:
+      - PYTHONPATH=/app
+      - TZ=Asia/Seoul
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_SERVER_ENABLE_CORS=false
+      - STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION=false
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - earthquake_network
+    # 원격 접속을 위한 추가 설정
+    command: ["streamlit", "run", "new2_streamlit_dashboard.py", 
+              "--server.port=8501", 
+              "--server.address=0.0.0.0", 
+              "--server.headless=true", 
+              "--server.enableCORS=false",
+              "--server.enableXsrfProtection=false",
+              "--browser.gatherUsageStats=false"]
+
+  # InfluxDB (선택사항)
+  influxdb:
+    image: influxdb:2.0
+    container_name: earthquake_influxdb_remote
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=earthquake
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin123
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+    restart: unless-stopped
+    networks:
+      - earthquake_network
+
+  # Nginx 리버스 프록시 (선택사항 - HTTPS 및 도메인 사용 시)
+  nginx:
+    image: nginx:alpine
+    container_name: earthquake_nginx
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      # SSL 인증서가 있다면:
+      # - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - earthquake_dashboard
+    restart: unless-stopped
+    networks:
+      - earthquake_network
+
+networks:
+  earthquake_network:
+    driver: bridge
+
+volumes:
+  influxdb_data:

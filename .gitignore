@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+earthquake_env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 환경 변수
+.env
+.env.local
+.env.production
+
+# 로그 파일
+*.log
+logs/
+retraining_system.log
+
+# 임시 파일
+*.tmp
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 대용량 데이터 파일
+*.zip
+*.tar.gz
+capture/
+*.npy
+X_balanced.npy
+y_balanced.npy
+
+# 모델 파일 (용량 제한으로 제외, 필요 시 Git LFS 사용)
+*.h5
+
+# 실시간 데이터 (로컬 전용)
+influxLogs/
+data/
+retrained_models/
+
+# 문서 이미지
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.hwp
+
+# IDE 설정
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 테스트 파일
+test_*.py
+debug_*.py
+analyze_*.py
+check_*.py
+setup_*.py
+fix_*.py
+generate_*.py
+create_*.py
+
+# 데이터 전처리 스크립트 (배포용 제외)
+*process_*.py
+combine_*.py
+train_*.py
+convert_*.py
+preprocess_*.py
+retrain_*.py
+
+# 백업 파일
+*.backup
+*_backup.py
+
+# Streamlit 설정
+.streamlit/secrets.toml
+
+# 배포 관련 (로컬 전용)
+deployment_report.json

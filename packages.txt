@@ -1,0 +1,10 @@
+# Streamlit Cloud 시스템 패키지 (apt 패키지)
+# 이 파일은 Streamlit Cloud에서 시스템 레벨 패키지를 설치할 때 사용됩니다.
+
+# 이미지 처리를 위한 라이브러리
+libgl1-mesa-glx
+libglib2.0-0
+
+# 시스템 유틸리티
+curl
+wget
