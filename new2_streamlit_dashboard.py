@@ -38,26 +38,26 @@ st.sidebar.write("• 불규칙생활진동: 96.9%")
 # 데모 데이터 생성 함수 (캐시 제거로 실시간 업데이트)
 def generate_demo_sensor_data():
     """데모용 실시간 센서 데이터 생성 (캡처10 참조 스타일)"""
-    # 시간 배열 (0~3.5초, 3500 데이터 포인트)
-    time_points = np.linspace(0, 3.5, 3500)
+    # 시간 배열 (0~4000 샘플, 4000 데이터 포인트)
+    time_points = np.linspace(0, 4000, 4000)
     
     # 지진 시뮬레이션 (높은 진폭, 넓은 범위)
     freq1, freq2 = 5.0, 8.0  # 높은 주파수
     
     # X축 데이터 (-200 ~ 200 범위)
-    x_data = np.random.normal(0, 20, 3500) + \
-             120 * np.sin(2 * np.pi * freq1 * time_points) + \
-             60 * np.sin(2 * np.pi * freq2 * time_points)
+    x_data = np.random.normal(0, 20, 4000) + \
+             120 * np.sin(2 * np.pi * freq1 * time_points / 1000) + \
+             60 * np.sin(2 * np.pi * freq2 * time_points / 1000)
     
     # Y축 데이터 (-200 ~ 200 범위) 
-    y_data = np.random.normal(0, 20, 3500) + \
-             100 * np.cos(2 * np.pi * freq1 * 0.7 * time_points) + \
-             50 * np.cos(2 * np.pi * freq2 * 1.3 * time_points)
+    y_data = np.random.normal(0, 20, 4000) + \
+             100 * np.cos(2 * np.pi * freq1 * 0.7 * time_points / 1000) + \
+             50 * np.cos(2 * np.pi * freq2 * 1.3 * time_points / 1000)
     
     # Z축 데이터 (-200 ~ 200 범위)
-    z_data = np.random.normal(0, 20, 3500) + \
-             110 * np.sin(2 * np.pi * freq1 * 1.1 * time_points) + \
-             55 * np.sin(2 * np.pi * freq2 * 0.9 * time_points)
+    z_data = np.random.normal(0, 20, 4000) + \
+             110 * np.sin(2 * np.pi * freq1 * 1.1 * time_points / 1000) + \
+             55 * np.sin(2 * np.pi * freq2 * 0.9 * time_points / 1000)
     
     # 진도 계산 (벡터 크기)
     magnitude = np.sqrt(x_data**2 + y_data**2 + z_data**2) / 50  # 스케일 조정
@@ -235,10 +235,10 @@ fig.update_layout(
     margin=dict(t=80, b=50, l=50, r=50)  # 마진 증가
 )
 
-# 모든 서브플롯 x축을 시간으로 설정 (캡처10 참조)
+# 모든 서브플롯 x축을 시간으로 설정 (0~4000 범위)
 for i in range(1, 3):
     for j in range(1, 3):
-        fig.update_xaxes(title_text="시간 (샘플)", row=i, col=j, range=[0, 3.5])
+        fig.update_xaxes(title_text="시간 (샘플)", row=i, col=j, range=[0, 4000])
 
 # Y축 라벨 및 범위 설정 (캡처10 참조)
 fig.update_yaxes(title_text="UI\n단위", row=1, col=1, range=[-200, 200])
