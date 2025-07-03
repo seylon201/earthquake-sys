@@ -44,11 +44,17 @@ def generate_demo_sensor_data():
     # 40초 (4000 샘플) 3축 가속도 데이터
     time_points = np.linspace(0, 40, 4000)
     
-    # 지진 시뮬레이션 (낮은 주파수, 높은 진폭)
-    earthquake_freq = 0.5 + np.random.random() * 0.5  # 0.5-1.0 Hz
-    x_data = np.random.normal(0, 0.1, 4000) + 0.8 * np.sin(2 * np.pi * earthquake_freq * time_points)
-    y_data = np.random.normal(0, 0.1, 4000) + 0.6 * np.cos(2 * np.pi * earthquake_freq * 0.8 * time_points)  
-    z_data = np.random.normal(0, 0.1, 4000) + 0.7 * np.sin(2 * np.pi * earthquake_freq * 1.2 * time_points)
+    # 지진 시뮬레이션 (캡처10 참조 - 높은 진폭, 넓은 범위)
+    earthquake_freq = 2.5 + np.random.random() * 2.0  # 2.5-4.5 Hz
+    # X축 데이터 (-200 ~ 200 범위)
+    x_data = np.random.normal(0, 15, 4000) + 80 * np.sin(2 * np.pi * earthquake_freq * time_points) + \
+             40 * np.sin(2 * np.pi * earthquake_freq * 1.5 * time_points)
+    # Y축 데이터 (-200 ~ 200 범위) 
+    y_data = np.random.normal(0, 15, 4000) + 70 * np.cos(2 * np.pi * earthquake_freq * 0.8 * time_points) + \
+             35 * np.cos(2 * np.pi * earthquake_freq * 2.2 * time_points)
+    # Z축 데이터 (-200 ~ 200 범위)
+    z_data = np.random.normal(0, 15, 4000) + 90 * np.sin(2 * np.pi * earthquake_freq * 1.2 * time_points) + \
+             45 * np.sin(2 * np.pi * earthquake_freq * 0.7 * time_points)
     
     # 진도 계산 (벡터 크기)
     magnitude = np.sqrt(x_data**2 + y_data**2 + z_data**2)
@@ -170,11 +176,11 @@ with col2:
 # 실시간 이벤트 모니터링 및 센서 3축 가속도 파형
 st.header("📈 실시간 이벤트 모니터링 및 센서 3축 가속도 파형")
 
-# 이벤트 정보 표시바
+# 이벤트 정보 표시바 (캡처10 참조 - 주황색 배경)
 current_time = datetime.now()
 st.markdown(f"""
-<div style="background-color: #f0f2f6; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-<strong>이벤트:</strong> 센서_6060 | <strong>데이터:</strong> 3,973행 | <strong>분석:</strong> 🟢 불규칙생활진동 | <strong>발생시간:</strong> {current_time.strftime('%Y-%m-%d %H:%M:%S')}
+<div style="background-color: #FFA500; padding: 10px; border-radius: 5px; margin-bottom: 10px; color: white; font-weight: bold;">
+<strong>이벤트:</strong> 센서_6060 | <strong>데이터:</strong> 3,973행 | <strong>분석:</strong> 🟢 규칙적산업진동 | <strong>발생시간:</strong> {current_time.strftime('%Y-%m-%d %H:%M:%S')}
 </div>
 """, unsafe_allow_html=True)
 
@@ -235,10 +241,10 @@ for i in range(1, 3):
     for j in range(1, 3):
         fig.update_xaxes(title_text="시간 (샘플)", row=i, col=j)
 
-# Y축 라벨 설정
-fig.update_yaxes(title_text="UI\n단위", row=1, col=1)
-fig.update_yaxes(title_text="UI\n단위", row=1, col=2)
-fig.update_yaxes(title_text="UI\n단위", row=2, col=1)
+# Y축 라벨 및 범위 설정 (캡처10 참조)
+fig.update_yaxes(title_text="UI\n단위", row=1, col=1, range=[-200, 200])
+fig.update_yaxes(title_text="UI\n단위", row=1, col=2, range=[-200, 200])
+fig.update_yaxes(title_text="UI\n단위", row=2, col=1, range=[-200, 200])
 fig.update_yaxes(title_text="진도", row=2, col=2, range=[0, 15])
 
 st.plotly_chart(fig, use_container_width=True)
