@@ -37,33 +37,33 @@ st.sidebar.write("• 불규칙생활진동: 96.9%")
 
 # 데모 데이터 생성 함수 (캐시 제거로 실시간 업데이트)
 def generate_demo_sensor_data():
-    """데모용 실시간 센서 데이터 생성"""
-    np.random.seed(int(time.time()) % 100)  # 시간 기반 시드로 변화 생성
+    """데모용 실시간 센서 데이터 생성 (캡처10 참조 스타일)"""
+    # 시간 배열 (0~3.5초, 3500 데이터 포인트)
+    time_points = np.linspace(0, 3.5, 3500)
     
-    # 40초 (4000 샘플) 3축 가속도 데이터
-    time_points = np.linspace(0, 40, 4000)
+    # 지진 시뮬레이션 (높은 진폭, 넓은 범위)
+    freq1, freq2 = 5.0, 8.0  # 높은 주파수
     
-    # 지진 시뮬레이션 (캡처10 참조 - 높은 진폭, 넓은 범위)
-    earthquake_freq = 2.5 + np.random.random() * 2.0  # 2.5-4.5 Hz
     # X축 데이터 (-200 ~ 200 범위)
-    x_data = np.random.normal(0, 15, 4000) + 80 * np.sin(2 * np.pi * earthquake_freq * time_points) + \
-             40 * np.sin(2 * np.pi * earthquake_freq * 1.5 * time_points)
+    x_data = np.random.normal(0, 20, 3500) + \
+             120 * np.sin(2 * np.pi * freq1 * time_points) + \
+             60 * np.sin(2 * np.pi * freq2 * time_points)
+    
     # Y축 데이터 (-200 ~ 200 범위) 
-    y_data = np.random.normal(0, 15, 4000) + 70 * np.cos(2 * np.pi * earthquake_freq * 0.8 * time_points) + \
-             35 * np.cos(2 * np.pi * earthquake_freq * 2.2 * time_points)
+    y_data = np.random.normal(0, 20, 3500) + \
+             100 * np.cos(2 * np.pi * freq1 * 0.7 * time_points) + \
+             50 * np.cos(2 * np.pi * freq2 * 1.3 * time_points)
+    
     # Z축 데이터 (-200 ~ 200 범위)
-    z_data = np.random.normal(0, 15, 4000) + 90 * np.sin(2 * np.pi * earthquake_freq * 1.2 * time_points) + \
-             45 * np.sin(2 * np.pi * earthquake_freq * 0.7 * time_points)
+    z_data = np.random.normal(0, 20, 3500) + \
+             110 * np.sin(2 * np.pi * freq1 * 1.1 * time_points) + \
+             55 * np.sin(2 * np.pi * freq2 * 0.9 * time_points)
     
     # 진도 계산 (벡터 크기)
-    magnitude = np.sqrt(x_data**2 + y_data**2 + z_data**2)
+    magnitude = np.sqrt(x_data**2 + y_data**2 + z_data**2) / 50  # 스케일 조정
+    magnitude = np.clip(magnitude, 0, 15)  # 0-15 범위로 제한
     
-    # 실제 진도로 정규화 (4.2 진도 시뮬레이션)
-    max_magnitude = np.max(magnitude)
-    target_intensity = 4.2
-    magnitude_normalized = (magnitude / max_magnitude) * target_intensity
-    
-    return time_points, x_data, y_data, z_data, magnitude_normalized
+    return time_points, x_data, y_data, z_data, magnitude
 
 # 데모 이벤트 데이터
 @st.cache_data
@@ -192,13 +192,13 @@ from plotly.subplots import make_subplots
 fig = make_subplots(
     rows=2, cols=2,
     subplot_titles=('센서 - X축 가속도 | 진도: 3.00', '센서 - Y축 가속도', '센서 - Z축 가속도', '센서 - 진도 (0.00~15.00)'),
-    vertical_spacing=0.12,
-    horizontal_spacing=0.08
+    vertical_spacing=0.15,  # 세로 간격 증가
+    horizontal_spacing=0.10  # 가로 간격 증가
 )
 
-# 전체 데이터 표시 (캡처10 참조 시간 범위)
-display_points = 3500
-time_display = np.linspace(0, 3.5, display_points)  # 0~3.5초 범위로 조정
+# 데이터 표시 (전체 데이터 사용)
+display_points = len(time_points)
+time_display = time_points
 
 # X축 가속도 (빨간색)
 fig.add_trace(
@@ -228,11 +228,11 @@ fig.add_trace(
     row=2, col=2
 )
 
-# 레이아웃 업데이트
+# 레이아웃 업데이트 (간격 조정)
 fig.update_layout(
-    height=600,
+    height=650,  # 높이 증가
     showlegend=False,
-    margin=dict(t=60, b=40, l=40, r=40)
+    margin=dict(t=80, b=50, l=50, r=50)  # 마진 증가
 )
 
 # 모든 서브플롯 x축을 시간으로 설정 (캡처10 참조)
