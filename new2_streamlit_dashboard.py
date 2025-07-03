@@ -22,7 +22,6 @@ st.set_page_config(
 # 메인 타이틀
 st.title("🌍 지진 오보 분석 시스템")
 st.markdown("#### ConvLSTM 기반 실시간 모니터링")
-st.info("🔍 세로운 이벤트 학습을 위해 사이드바의 **새로고침** 버튼을 클릭해주세요.")
 
 # 사이드바 정보
 st.sidebar.header("🎛️ 시스템 상태")
@@ -118,11 +117,11 @@ def get_demo_events():
 # 클래스 분포 시각화 섹션
 st.header("📊 클래스 분포 시각화")
 
-# 데이터 분포 정보
+# 데이터 분포 정보 (캡처17 참조 - 각 클래스별 다른 수치)
 class_data = {
-    "불규칙생활진동": 543,
-    "규칙적산업진동": 543, 
-    "지진": 543
+    "불규칙생활진동": 22,
+    "규칙적산업진동": 7, 
+    "지진": 4
 }
 
 col1, col2 = st.columns(2)
@@ -145,7 +144,7 @@ with col1:
 
 with col2:
     st.subheader("클래스별 이벤트 수")
-    # 바 차트 생성
+    # 바 차트 생성 (캡처17 참조 스타일)
     fig_bar = px.bar(
         x=list(class_data.keys()),
         y=list(class_data.values()),
@@ -154,14 +153,17 @@ with col2:
             "불규칙생활진동": "#2E8B57",
             "규칙적산업진동": "#FF8C00",
             "지진": "#DC143C"
-        }
+        },
+        text=list(class_data.values())  # 막대 위에 수치 표시
     )
+    fig_bar.update_traces(texttemplate='%{text}', textposition='outside')
     fig_bar.update_layout(
         height=300,
         showlegend=False,
-        margin=dict(t=0, b=0, l=0, r=0),
+        margin=dict(t=20, b=0, l=0, r=0),
         yaxis_title="수",
-        xaxis_title=""
+        xaxis_title="",
+        yaxis=dict(range=[0, max(class_data.values()) * 1.2])  # Y축 범위 설정
     )
     st.plotly_chart(fig_bar, use_container_width=True)
 
