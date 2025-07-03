@@ -196,9 +196,9 @@ fig = make_subplots(
     horizontal_spacing=0.08
 )
 
-# 전체 데이터 표시 (더 긴 시간 범위)
+# 전체 데이터 표시 (캡처10 참조 시간 범위)
 display_points = 3500
-time_display = time_points[:display_points]
+time_display = np.linspace(0, 3.5, display_points)  # 0~3.5초 범위로 조정
 
 # X축 가속도 (빨간색)
 fig.add_trace(
@@ -235,10 +235,10 @@ fig.update_layout(
     margin=dict(t=60, b=40, l=40, r=40)
 )
 
-# 모든 서브플롯 x축을 시간으로 설정
+# 모든 서브플롯 x축을 시간으로 설정 (캡처10 참조)
 for i in range(1, 3):
     for j in range(1, 3):
-        fig.update_xaxes(title_text="시간 (샘플)", row=i, col=j)
+        fig.update_xaxes(title_text="시간 (샘플)", row=i, col=j, range=[0, 3.5])
 
 # Y축 라벨 및 범위 설정 (캡처10 참조)
 fig.update_yaxes(title_text="UI\n단위", row=1, col=1, range=[-200, 200])
