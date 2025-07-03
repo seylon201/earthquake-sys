@@ -35,8 +35,7 @@ st.sidebar.write("• 지진: 99.4% 정확도")
 st.sidebar.write("• 규칙적산업진동: 99.1%")
 st.sidebar.write("• 불규칙생활진동: 96.9%")
 
-# 데모 데이터 생성 함수
-@st.cache_data
+# 데모 데이터 생성 함수 (캐시 제거로 실시간 업데이트)
 def generate_demo_sensor_data():
     """데모용 실시간 센서 데이터 생성"""
     np.random.seed(int(time.time()) % 100)  # 시간 기반 시드로 변화 생성
